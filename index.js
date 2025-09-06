@@ -14,18 +14,33 @@ function UpdateDisplay() {
 //Function to increase the count
 function IncreaseCount() {
     count++;
+    document.getElementById('count').style.color = 'green';
+    if (count === 0) {
+        document.getElementById('count').style.color = 'black';
+    }
+    if (count < 0) {
+        document.getElementById('count').style.color = 'red';
+    }
     UpdateDisplay();
 }
 
 //Function to decrease the count
 function DecreaseCount() {
     count--;
+    document.getElementById('count').style.color = 'red';
+    if (count === 0) {
+        document.getElementById('count').style.color = 'black';
+    }
+        if (count > 0) {
+        document.getElementById('count').style.color = 'green';
+    }
     UpdateDisplay();
 }
 
 //Function to reset the count
 function ResetCount() {
     count = 0;
+    document.getElementById('count').style.color = 'black';
     UpdateDisplay();
 }
 
@@ -36,3 +51,4 @@ resetButton.addEventListener('click', ResetCount);
 
 // Initial display update
 UpdateDisplay();
+
