@@ -44,6 +44,17 @@ function ResetCount() {
     UpdateDisplay();
 }
 
+// Add keyboard event listener for ArrowUp, ArrowDown, and 'r'/'R' keys
+document.addEventListener('keydown', function(event) {
+    if(event.key === 'ArrowUp') {
+        IncreaseCount();
+    } else if(event.key === 'ArrowDown') {
+        DecreaseCount();
+    } else if(event.key === 'r' || event.key === 'R') {
+        ResetCount();
+    }
+});
+
 // Add Event Listners to the buttons to update the functions
 increaseButton.addEventListener('click', IncreaseCount);
 decreaseButton.addEventListener('click', DecreaseCount);
