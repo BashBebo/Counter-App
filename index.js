@@ -1,4 +1,3 @@
-// Initialize count variable
 let count = 0;
 
 const countElement = document.getElementById('count');
@@ -17,7 +16,7 @@ function IncreaseCount() {
     document.getElementById('count').style.color = 'green';
     if (count === 0) {
         document.getElementById('count').style.color = 'black';
-    }
+    }   
     if (count < 0) {
         document.getElementById('count').style.color = 'red';
     }
