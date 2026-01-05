@@ -1,27 +1,27 @@
-let count = 0;
+let count = 0; // A ressainable varible is just used here to set the variable down to change
 
-const countElement = document.getElementById('count');
-const increaseButton = document.getElementById('increase');
-const decreaseButton = document.getElementById('decrease');
-const resetButton = document.getElementById('reset');
+const countElement = document.getElementById('count'); // a non declared ressassianble variable creating the count element getting the element by id
+const increaseButton = document.getElementById('increase'); // getting element id to create a varible called increaseButton
+const decreaseButton = document.getElementById('decrease'); // Creating a decreaseButton variable
+const resetButton = document.getElementById('reset'); // Creating a reset button variable
 
 // Function to show the count
-function UpdateDisplay() {
-    countElement.textContent = count;
+function UpdateDisplay() {     // function used to update the display
+    countElement.textContent = count; // using the countElement to make sure the text content inside the element is the variable
 }
 
 //Function to increase the count
-function IncreaseCount() {
-    count++;
-    document.getElementById('count').style.color = 'green';
-    if (count === 0) {
-        document.getElementById('count').style.color = 'black';
-    }   
-    if (count < 0) {
-        document.getElementById('count').style.color = 'red';
+    function IncreaseCount() {
+        count++;
+        document.getElementById('count').style.color = 'green';
+        if (count === 0) {
+            document.getElementById('count').style.color = 'black';
+        }   
+        if (count < 0) {
+            document.getElementById('count').style.color = 'red';
+        }
+        UpdateDisplay();
     }
-    UpdateDisplay();
-}
 
 //Function to decrease the count
 function DecreaseCount() {
